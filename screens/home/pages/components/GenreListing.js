@@ -8,16 +8,18 @@ import {
 import { MovieListing } from './MovieListing';
 
 
-export function GenreListing(){
+export const  GenreListing=(props)=>{
+  console.log("this.props. in genere",props);
+  
     return (
       <View style={s.scene}>
         <FlatList
-          data={this.props.genres}
+          data={props.genres}
           renderItem={({ item, index }) => {
             return (
               <View key={index} style={{ marginVertical: 0  }}>
                 <Text style={s.textStyle}>{item.name}</Text>
-                <MovieListing movieList={item.id} index={index} navigation={this.props.navigation} />
+                <MovieListing movieList={item.id} index={index} navigation={props.navigation} />
               </View>
             );
           }}
@@ -25,56 +27,6 @@ export function GenreListing(){
       </View>
     );
 }
-
-  // _maybeRenderDevelopmentModeWarning() {
-  //   if (__DEV__) {
-  //     const learnMoreButton = (
-  //       <Text onPress={this._handleLearnMorePress} style={styles.helpLinkText}>
-  //         Learn more
-  //       </Text>
-  //     );
-
-  //     return (
-  //       <Text style={styles.developmentModeText}>
-  //         Development mode is enabled, your app will be slower but you can use useful development
-  //         tools. {learnMoreButton}
-  //       </Text>
-  //     );
-  //   } else {
-  //     return (
-  //       <Text style={styles.developmentModeText}>
-  //         You are not in development mode, your app will run at full speed.
-  //       </Text>
-  //     );
-  //   }
-  // }
-
-//   _handleLearnMorePress = () => {
-//     WebBrowser.openBrowserAsync('https://docs.expo.io/versions/latest/guides/development-mode');
-//   };
-
-//   _handleHelpPress = () => {
-//     WebBrowser.openBrowserAsync(
-//       'https://docs.expo.io/versions/latest/guides/up-and-running.html#can-t-see-your-changes'
-//     );
-//   };
-// }//
-
-const mapStateToprops = (state) => {
-  return {
-  }
-}
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-    // getGenreList: (pageNo) => dispatch(getGenreListAction(pageNo))
-    // login: (values) => dispatch(doLogin(values)),
-    // rehydrateReducer: (values) => dispatch(rehydrateReducer(values))
-  }
-}
-
-// export const GenreListing = connect(mapStateToprops, mapDispatchToProps)(GenreListingComponent)
-
 
 const s = StyleSheet.create({
   scene: {

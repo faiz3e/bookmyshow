@@ -11,6 +11,9 @@ class LandingPageComponent extends React.Component {
     genres: [],
     pageNo: 1
   }
+  static navigationOptions = {
+    header: null
+  };
 
   _keyExtractor = (item, index) => item.id;
 
@@ -25,7 +28,7 @@ class LandingPageComponent extends React.Component {
       this.props.getGenreList(this.state.pageNo)
     })
   }
-  
+
   render() {
     return (
       <View style={styles.container}>

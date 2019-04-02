@@ -1,5 +1,5 @@
 import React from 'react';
-import {  Image,  Text,  TouchableOpacity,  View,  FlatList} from 'react-native';
+import { Image, Text, TouchableOpacity, View, FlatList } from 'react-native';
 import { connect } from 'react-redux'
 
 import { WebBrowser } from 'expo';
@@ -25,7 +25,7 @@ class MovieListingComponent extends React.Component {
             <TouchableOpacity onPress={() => this.onItemClicked(item)}>
               <View key={id} style={{ marginHorizontal: 20 }}>
                 <Image
-                  style={{ width: 100, height: 150 ,borderRadius:5}}
+                  style={{ width: 100, height: 150, borderRadius: 5 }}
                   source={{ uri: `https://image.tmdb.org/t/p/w500/${item.poster_path}` }}
                 />
                 <Text style={styles.movieName}>{item.title}</Text>
@@ -36,43 +36,7 @@ class MovieListingComponent extends React.Component {
       />
     );
   }
-
-//   _maybeRenderDevelopmentModeWarning() {
-//     if (__DEV__) {
-//       const learnMoreButton = (
-//         <Text onPress={this._handleLearnMorePress} style={styles.helpLinkText}>
-//           Learn more
-//         </Text>
-//       );
-
-//       return (
-//         <Text style={styles.developmentModeText}>
-//           Development mode is enabled, your app will be slower but you can use useful development
-//           tools. {learnMoreButton}
-//         </Text>
-//       );
-//     } else {
-//       return (
-//         <Text style={styles.developmentModeText}>
-//           You are not in development mode, your app will run at full speed.
-//         </Text>
-//       );
-//     }
-//   }
-
-//   _handleLearnMorePress = () => {
-//     WebBrowser.openBrowserAsync('https://docs.expo.io/versions/latest/guides/development-mode');
-//   };
-
-//   _handleHelpPress = () => {
-//     WebBrowser.openBrowserAsync(
-//       'https://docs.expo.io/versions/latest/guides/up-and-running.html#can-t-see-your-changes'
-//     );
-//   };
 }
-
-
-
 const mapStateToprops = (state) => {
   return {
     movies: state.movieListingReducer.movies
