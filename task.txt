@@ -1,0 +1,104 @@
+//req 
+
+movie list screen 
+-This screen should have a vertical list.
+Each item in this list should have a heading(which will be the genre name)
+and a horizontal scrolling list of movies of that genre.
+Each item in the horizontally scrolling list should show the movie’s name and poster image
+(Use a placeholder in case poster image is not available).
+
+screen(movie list screen)
+
+heading1 genre(a)
+    horizontal scrolling[1,2,3,4,5]
+    name and poster 
+heading2 genre(b)
+    horizontal scrolling[1,2,3,4,5]
+    name and poster 
+heading3 genre(c)
+    horizontal scrolling[1,2,3,4,5]
+    name and poster 
+
+List of api and params
+
+https://api.themoviedb.org/4/list?api_key=68e82445c8842ba8616d0f6bf0e97a41
+header 
+Content-Type : application/json
+fixtures '/genre.json'
+
+https://api.themoviedb.org/3/genre/<genre_id>/movies
+eg https://api.themoviedb.org/3/genre/28/movies?api_key=68e82445c8842ba8616d0f6bf0e97a41
+header
+Content-Type : application/json
+fixtures '/genre28movieList.json'
+
+eg https://api.themoviedb.org/3/movie/9947?api_key=68e82445c8842ba8616d0f6bf0e97a41
+https://api.themoviedb.org/3/movie/<movie_id>
+header
+Content-Type : application/json
+fixtures '/movieDetail.json'
+
+https://image.tmdb.org/t/p/w500/<image.ext>
+https://image.tmdb.org/t/p/w500/7PzJdsLGlR7oW4J0J5Xcd0pHGRg.png
+
+
+2. Movie Detail Screen
+  When a user selects any movie from a list of movies, it should navigate to Movie detail screen:
+  This screen should contain the following information about the movie:
+  Cover image(backdrop_path)
+  Poster image(poster_path)
+  Description(overview)
+  Language
+  Popularity
+  Release date
+  Revenue
+
+screen 
+cover image 
+
+
+
+List of api and params
+
+
+//todo []   
+
+Kindly complete the following task.
+Instructions:
+• Your code must follow React-Native coding standards
+• You can use a third-party open source library wherever required. 
+• The app should be responsive (support different screen sizes) 
+Assignment: Movies App
+It is an app which lists all movies sorted as per genre using The Movie Db API (IMDB). 
+It comprises of total 2 screens:
+1. Movies List Screen:
+- This screen should have a vertical list. Each item in this list should have a heading(which will be the genre name) and a horizontal scrolling list of movies of that genre. Each item in the horizontally scrolling list should show the movie’s name and poster image (Use a placeholder in case poster image is not available).
+API details:
+1. To fetch the list of genres:
+https://api.themoviedb.org/3/genre/movie/list
+Param:
+api_key=68e82445c8842ba8616d0f6bf0e97a41 
+2. To fetch a list of movies as per the genre:
+https://api.themoviedb.org/3/genre/<genre_id>/movies
+Param:
+api_key=68e82445c8842ba8616d0f6bf0e97a41 
+2. Movie Detail Screen
+[Done] When a user selects any movie from a list of movies, it should navigate to Movie detail screen:
+This screen should contain the following information about the movie:
+[Done]Cover image(backdrop_path)
+[Done]Poster image(poster_path)
+[Done]Description(overview)
+[Done]Language
+[Done]Popularity
+[Done]Release date
+Revenue
+* You can design the UI of this screen 
+API details:
+Fetch movies details:
+https://api.themoviedb.org/3/movie/<movie_id>
+Param:
+api_key=68e82445c8842ba8616d0f6bf0e97a41 
+For any doubts about API you can refer: 
+https://developers.themoviedb.org
+You have complete the task by Saturday end of the day. Feel free to reach out to me if you have any doubts. If you are not able to complete all the features, I would still like to see your task.
+
